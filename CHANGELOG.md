@@ -8,11 +8,88 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 
 ### Added
+
+### Changed
+
+### Fixed
+
+### Security
+
+## [0.9.9] - 2021-02-14
+
+### Added
+
+- Submission export
+- Lokalize reference
+- more languages
+
+### Changed
+
+- updated french translations by @Vercety87
+- upgrade to node 14 (https://github.com/ohmyform/ohmyform/issues/99)
+
+### Fixed
+
+- missing dependency to @apollo/client
+- footer rendering during authentication check
+
+### Security
+
+- authentication check for profile page
+
+## [0.9.8] - 2020-09-02
+
+### Changed
+
+- improved german translation (https://github.com/ohmyform/ui/pull/28)
+
+### Fixed
+
+- colors for landing page buttons
+- menu selection type
+
+### Security
+
+- upgraded dependencies
+
+## [0.9.6] - 2020-07-17
+
+### Added
+
+- slug for fields to be able to set value by url parameter
+- form submission hokks
+- default index.html for api without bundled ui
+- slug for form fields can now be saved
+- submission webhooks with ability to customize json payload
+  ```
+  {
+    form: ID
+    submission: ID
+    created: DateTime
+    lastModified: DateTime
+    fields: [
+        {
+            field: ID
+            slug: String
+            value: any
+        }
+    ]
+  }
+  ```
+  
 ### Changed
 
 - minify containers to reduce layer size
 
 ### Fixed
+
+- bug in settings resolver with nullable fields
+- bug if user was deleted and form still exists
+- do not show login note if it is not set
+- typo in dropdown options https://github.com/ohmyform/ohmyform/issues/96
+- query parms are not parsed https://github.com/ohmyform/ui/pull/27 https://github.com/ohmyform/ohmyform/issues/100
+- errors because of missing user reference (https://github.com/ohmyform/ohmyform/issues/102)
+
 ### Security
 
 - container now runs as non root user
